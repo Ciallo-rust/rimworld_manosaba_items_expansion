@@ -1,0 +1,2 @@
+# rimworld_manosaba_items_expansion
+边缘世界(环世界/RimWorld)魔法少女的魔女审判物品拓展mod
