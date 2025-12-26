@@ -1,2 +1,3 @@
-# rimworld_manosaba_items_expansion
-边缘世界(环世界/RimWorld)魔法少女的魔女审判物品拓展mod
+# 边缘世界(环世界/RimWorld)魔法少女的魔女审判物品拓展mod
+
+将魔裁的物品(以不太准确的方式)还原到环世界，目前以整活为主，暂不考虑平衡性。

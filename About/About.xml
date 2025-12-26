@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+  <packageId>ikun-jntm.manosaba_items_expansion</packageId>
+  <name>魔法少女的魔女审判物品拓展</name>
+  <author>篮球觅知音</author>
+  <modIconPath>SimpleSpear/SimpleSpear</modIconPath>
+  <modVersion>1(beta)</modVersion>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <url>https://github.com/Ciallo-rust/rimworld_manosaba_items_expansion</url>
+  <description>一个物品拓展mod,物品创意来源于游戏《魔法少女的魔女审判》.&#10;&#10;本mod基于MIT协议开源.</description>
+</ModMetaData>
