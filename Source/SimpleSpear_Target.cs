@@ -3,7 +3,7 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace ManosabaThings  //借鉴心灵冲击枪的目标验证逻辑，禁止对Boss使用长矛
+namespace ManosabaItemsExpansion  //借鉴心灵冲击枪的目标验证逻辑，禁止对Boss使用长矛
 {
 	public class SimpleSpear_Target : Verb_CastTargetEffect
 	{

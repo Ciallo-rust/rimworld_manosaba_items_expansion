@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-    <AssemblyName>manosaba_things</AssemblyName>
-    <RootNamespace>manosaba_things</RootNamespace>
+    <AssemblyName>manosaba_items_expansion</AssemblyName>
+    <RootNamespace>manosaba_items_expansion</RootNamespace>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>../Assemblies</OutputPath>
   </PropertyGroup>
@@ -18,7 +18,11 @@
       <Private>False</Private>
     </Reference>
       
-    </ItemGroup>
+    <!--<Reference Include="0Harmony">
+      <HintPath>$(HOME)/.local/share/Steam/steamapps/workshop/content/294100/2009463077/Current/Assemblies/0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>-->
+  </ItemGroup>
     
   
 

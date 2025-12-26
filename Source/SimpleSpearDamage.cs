@@ -3,7 +3,7 @@ using RimWorld;
 using Verse;
 using System.Linq;
 
-namespace ManosabaThings   //长矛造成伤害的逻辑，无接口
+namespace ManosabaItemsExpansion   //长矛造成伤害的逻辑，无接口
 {
 	public class SimpleSpearDamage : CompTargetEffect
 	{

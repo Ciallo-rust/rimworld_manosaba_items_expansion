@@ -1,0 +1,10 @@
+/home/a/mod/rimworld_manosaba_items_expansion/Assemblies/manosaba_items_expansion.dll
+/home/a/mod/rimworld_manosaba_items_expansion/Assemblies/manosaba_items_expansion.pdb
+/home/a/mod/rimworld_manosaba_items_expansion/Source/obj/Debug/manosaba.csproj.AssemblyReference.cache
+/home/a/mod/rimworld_manosaba_items_expansion/Source/obj/Debug/manosaba.GeneratedMSBuildEditorConfig.editorconfig
+/home/a/mod/rimworld_manosaba_items_expansion/Source/obj/Debug/manosaba.AssemblyInfoInputs.cache
+/home/a/mod/rimworld_manosaba_items_expansion/Source/obj/Debug/manosaba.AssemblyInfo.cs
+/home/a/mod/rimworld_manosaba_items_expansion/Source/obj/Debug/manosaba.csproj.CoreCompileInputs.cache
+/home/a/mod/rimworld_manosaba_items_expansion/Source/obj/Debug/manosaba.sourcelink.json
+/home/a/mod/rimworld_manosaba_items_expansion/Source/obj/Debug/manosaba_items_expansion.dll
+/home/a/mod/rimworld_manosaba_items_expansion/Source/obj/Debug/manosaba_items_expansion.pdb

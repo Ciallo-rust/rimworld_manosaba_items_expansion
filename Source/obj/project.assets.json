@@ -420,9 +420,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/a/mod/rimworld_manosaba_items_expansion/Source/manosaba_things.csproj",
-      "projectName": "manosaba_things",
-      "projectPath": "/home/a/mod/rimworld_manosaba_items_expansion/Source/manosaba_things.csproj",
+      "projectUniqueName": "/home/a/mod/rimworld_manosaba_items_expansion/Source/manosaba.csproj",
+      "projectName": "manosaba_items_expansion",
+      "projectPath": "/home/a/mod/rimworld_manosaba_items_expansion/Source/manosaba.csproj",
       "packagesPath": "/home/a/.nuget/packages/",
       "outputPath": "/home/a/mod/rimworld_manosaba_items_expansion/Source/obj/",
       "projectStyle": "PackageReference",

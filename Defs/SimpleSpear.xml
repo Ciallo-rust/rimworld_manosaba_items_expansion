@@ -3,7 +3,7 @@
 
   <!-- 武器本体定义 -->
   <ThingDef ParentName="ApparelNoQualityBase">
-    <defName>ManosabaThings_SimpleSpear</defName>
+    <defName>ManosabaItemsExpansion_SimpleSpear</defName>
     <label>简易长矛</label>
     <description>一把由箭矢、长剑、木牌、扫把棍子用发带绑在一起的长矛。&#10;&#10;传说有一位演员使用简易长矛一击刺杀了名声远大于她的画家.但由于长矛极其脆弱而留下证据,演员也因此被投票处决.</description>
 
@@ -81,7 +81,7 @@
           </male>
         </east>
         <west>
-          <offset>(-0.2,0)</offset>
+          <offset>(0.45,0)</offset>
           <scale>(0.85,0.85)</scale>
           <thin>
             <offset>(0,0.1)</offset>
@@ -106,7 +106,7 @@
 
     <verbs>
       <li>
-        <verbClass>ManosabaThings.SimpleSpear_Target</verbClass>
+        <verbClass>ManosabaItemsExpansion.SimpleSpear_Target</verbClass>
 
         <label>处决目标</label>
         <hasStandardCommand>true</hasStandardCommand>
@@ -134,7 +134,7 @@
         <chargeNoun>charge</chargeNoun>
         <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
       </li>
-      <li Class="ManosabaThings.SimpleSpear_Damage">
+      <li Class="ManosabaItemsExpansion.SimpleSpear_Damage">
       </li>
       <li Class="CompProperties_TargetEffect_GoodwillImpact">
         <goodwillImpact>-200</goodwillImpact>

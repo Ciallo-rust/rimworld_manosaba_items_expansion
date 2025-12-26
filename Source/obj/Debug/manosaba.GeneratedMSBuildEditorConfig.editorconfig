@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = manosaba_items_expansion
+build_property.ProjectDir = /home/a/mod/rimworld_manosaba_items_expansion/Source/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

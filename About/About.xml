@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <ModMetaData>
-  <packageId>ikun-jntm.manosaba_items_expansion</packageId>
+  <packageId>ikunjntm.manosaba.items.expansion</packageId>
   <name>魔法少女的魔女审判物品拓展</name>
   <author>篮球觅知音</author>
   <modIconPath>SimpleSpear/SimpleSpear</modIconPath>
-  <modVersion>1(beta)</modVersion>
+  <modVersion>2</modVersion>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
