@@ -5,7 +5,7 @@
   <ThingDef ParentName="ApparelNoQualityBase">
     <defName>ManosabaItemsExpansion_SimpleSpear</defName>
     <label>简易长矛</label>
-    <description>一把由箭矢、长剑、木牌、扫把棍子用发带绑在一起的长矛。&#10;&#10;传说有一位演员使用简易长矛一击刺杀了名声远大于她的画家.但由于长矛极其脆弱而留下证据,演员也因此被投票处决.</description>
+    <description>一把由箭矢、长剑、木牌、扫把棍子用发带绑在一起的长矛.注意:此物品不可对首领单位使用.&#10;&#10;传说有一位演员使用简易长矛一击刺杀了名声远大于她的画家.但由于长矛极其脆弱而留下证据,演员也因此被投票处决.</description>
 
     <graphicData>
       <texPath>SimpleSpear/SimpleSpear</texPath>

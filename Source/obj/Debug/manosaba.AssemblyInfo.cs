@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("manosaba_items_expansion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a4aaa7ff010a33d24da31feb069cb899c5ecdf6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d875fd27d4ae734d30d11bc50c23c870991e32d")]
 [assembly: System.Reflection.AssemblyProductAttribute("manosaba_items_expansion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("manosaba_items_expansion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

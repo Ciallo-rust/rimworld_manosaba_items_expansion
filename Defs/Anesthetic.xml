@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 物品定义 -->
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>ManosabaItemsExpansion_Anesthetic</defName>
+    <label>麻醉药</label>
+    <description>看起来很奇怪的蓝色液体药品,会勾起人们的好奇心.&#10;&#10;服用后会导致昏迷2小时,但醒来后无副作用.出于奇怪的原因,这个东西能加心情与娱乐度.</description>
+    <possessionCount>75</possessionCount>
+    
+    
+    <descriptionHyperlinks>
+      <HediffDef>Manosaba_Anesthetic</HediffDef>
+    </descriptionHyperlinks>
+    
+    <graphicData>
+      <texPath>Anesthetic/Anesthetic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <!--<WorkToMake>600</WorkToMake>-->
+      <MarketValue>5</MarketValue>
+      <Mass>0.005</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      
+      <!-- 娱乐属性 -->
+      <joyKind>Chemical</joyKind>
+      <joy>0.8</joy>
+      
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff"><!-- 麻醉效果-->
+            <hediffDef>Manosaba_Anesthetic</hediffDef>
+            <severity>1.0</severity>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff"><!-- 心情效果-->
+            <hediffDef>Manosaba_Anesthetic_HappyAfterglow</hediffDef>
+            <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    
+    <!--<recipeMaker>-->
+      <!--<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>-->
+      <!--<skillRequirements>
+        <li>
+          <skill>Medicine</skill>  
+          <minLevel>4</minLevel>  
+        </li>
+      </skillRequirements> -->
+      <!--<recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <products>
+        <ManosabaItemsExpansion_Anesthetic>2</ManosabaItemsExpansion_Anesthetic>
+      </products>
+      <displayPriority>2110</displayPriority>
+    </recipeMaker>-->
+    
+    <!-- <costList>
+      <MedicineHerbal>1</MedicineHerbal>
+    </costList>-->
+    
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>200</listOrder>
+        <overdoseSeverityOffset>0.08~0.09</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <!-- 昏迷2小时 -->
+  <HediffDef ParentName="DiseaseBase">
+    <defName>Manosaba_Anesthetic</defName>
+    <label>麻醉</label>
+    <labelNoun>麻醉状态</labelNoun>
+    <description>短效麻醉.</description>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <initialSeverity>1.0</initialSeverity>
+    
+    <comps>
+        <li Class="HediffCompProperties_SeverityPerDay">
+            <severityPerDay>-12.0</severityPerDay>
+        </li>
+    </comps>
+
+    <stages>
+        <li>
+            <label>sedated</label>
+            <painFactor>0</painFactor>
+            <capMods>
+                <li>
+                    <capacity>Consciousness</capacity>
+                    <setMax>0.01</setMax>
+                </li>
+            </capMods>
+        </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 加心情 -->
+  <HediffDef>
+    <defName>Manosaba_Anesthetic_HappyAfterglow</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>麻醉余韵</label>
+    <description>服用这个药品麻醉后增加心情</description>
+    <defaultLabelColor>(1, 0, 1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>1.0</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2.0</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 心情定义 -->
+  <ThoughtDef>
+    <defName>Manosaba_Anesthetic_Mood</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>Manosaba_Anesthetic_HappyAfterglow</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>我当时睡的可香了</label>
+        <description>我当时睡的可香了.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <RecipeDef><!-- 采用伴生配方达不到要求，在此新建-->
+        <defName>Make_ManosabaItemsExpansion_Anesthetic_MedicineHerbal</defName>
+        <label>制作麻醉药</label>
+        <description>看起来很奇怪的蓝色液体药品,会勾起人们的好奇心.&#10;&#10;服用后会导致昏迷2小时,但醒来后无副作用.出于奇怪的原因,这个东西能加心情与娱乐度.</description>
+        <jobString>制作麻醉药.</jobString>
+        <workAmount>180</workAmount>
+        
+        <!-- 设置工作速度依赖的属性 -->
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+
+        
+        <ingredients>
+        <li>
+            <filter>
+                <thingDefs>
+                    <li>MedicineHerbal</li>
+                </thingDefs>
+            </filter>
+            <count>1</count>
+        </li>
+        </ingredients>
+         <fixedIngredientFilter>
+          <thingDefs>
+            <li>MedicineHerbal</li>
+          </thingDefs>
+        </fixedIngredientFilter>
+
+        <products>
+            <ManosabaItemsExpansion_Anesthetic>2</ManosabaItemsExpansion_Anesthetic>
+        </products>
+        <recipeUsers>
+            <li>DrugLab</li>
+        </recipeUsers>
+        <workSkill>Medicine</workSkill>
+        <skillRequirements>
+          <Medicine>4</Medicine>
+        </skillRequirements>
+  </RecipeDef>
+
+  <RecipeDef>
+        <defName>Make_ManosabaItemsExpansion_Anesthetic_MedicineHerbal-4</defName>
+        <label>制作麻醉药 x4</label>
+        <description>看起来很奇怪的蓝色液体药品,会勾起人们的好奇心.&#10;&#10;服用后会导致昏迷2小时,但醒来后无副作用.出于奇怪的原因,这个东西能加心情与娱乐度.</description>
+        <jobString>制作麻醉药.</jobString>
+        <workAmount>720</workAmount>
+        
+        <!-- 设置工作速度依赖的属性 -->
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+        
+        <ingredients>
+        <li>
+            <filter>
+                <thingDefs>
+                    <li>MedicineHerbal</li>
+                </thingDefs>
+            </filter>
+            <count>4</count>
+        </li>
+        </ingredients>
+         <!-- <fixedIngredientFilter>
+        <thingDefs>
+            <li>MedicineIndustrial</li>
+        </thingDefs>
+        </fixedIngredientFilter> -->
+
+        <products>
+            <ManosabaItemsExpansion_Anesthetic>8</ManosabaItemsExpansion_Anesthetic>
+        </products>
+        <recipeUsers>
+            <li>DrugLab</li>
+        </recipeUsers>
+        <workSkill>Medicine</workSkill>
+        <skillRequirements>
+          <Medicine>4</Medicine>
+        </skillRequirements>
+  </RecipeDef>
+
+  <RecipeDef>
+        <defName>Make_ManosabaItemsExpansion_Anesthetic_MedicineIndustrial</defName>
+        <label>使用医药制作麻醉药</label>
+        <description>看起来很奇怪的蓝色液体药品,会勾起人们的好奇心.&#10;&#10;服用后会导致昏迷2小时,但醒来后无副作用.出于奇怪的原因,这个东西能加心情与娱乐度.</description>
+        <jobString>制作麻醉药.</jobString>
+        <workAmount>300</workAmount>
+        
+        <!-- 设置工作速度依赖的属性 -->
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+        
+        <!-- 定义原料：1个医药 -->
+        <ingredients>
+        <li>
+            <filter>
+                <thingDefs>
+                    <li>MedicineIndustrial</li>
+                </thingDefs>
+            </filter>
+            <count>1</count>
+        </li>
+        </ingredients>
+         <!-- <fixedIngredientFilter>
+        <thingDefs>
+            <li>MedicineIndustrial</li>
+        </thingDefs>
+        </fixedIngredientFilter> -->
+
+        <products>
+            <ManosabaItemsExpansion_Anesthetic>4</ManosabaItemsExpansion_Anesthetic>
+        </products>
+        <recipeUsers>
+            <li>DrugLab</li>
+        </recipeUsers>
+        <workSkill>Medicine</workSkill>
+        <skillRequirements>
+          <Medicine>4</Medicine>
+        </skillRequirements>
+  </RecipeDef>
+
+  <RecipeDef>
+        <defName>Make_ManosabaItemsExpansion_Anesthetic_MedicineIndustrial-4</defName>
+        <label>使用医药制作麻醉药 x4</label>
+        <description>看起来很奇怪的蓝色液体药品,会勾起人们的好奇心.&#10;&#10;服用后会导致昏迷2小时,但醒来后无副作用.出于奇怪的原因,这个东西能加心情与娱乐度.</description>
+        <jobString>制作麻醉药.</jobString>
+        <workAmount>1200</workAmount>
+        
+        <!-- 设置工作速度依赖的属性 -->
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+        
+        <!-- 定义原料：1个医药 -->
+        <ingredients>
+        <li>
+            <filter>
+                <thingDefs>
+                    <li>MedicineIndustrial</li>
+                </thingDefs>
+            </filter>
+            <count>4</count>
+        </li>
+        </ingredients>
+         <!-- <fixedIngredientFilter>
+        <thingDefs>
+            <li>MedicineIndustrial</li>
+        </thingDefs>
+        </fixedIngredientFilter> -->
+
+        <products>
+            <ManosabaItemsExpansion_Anesthetic>16</ManosabaItemsExpansion_Anesthetic>
+        </products>
+        <recipeUsers>
+            <li>DrugLab</li>
+        </recipeUsers>
+        <workSkill>Medicine</workSkill>
+        <skillRequirements>
+          <Medicine>4</Medicine>
+        </skillRequirements>
+  </RecipeDef>
+
+</Defs>
